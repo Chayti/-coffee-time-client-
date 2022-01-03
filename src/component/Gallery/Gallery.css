@@ -1,7 +1,6 @@
 .gallery{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.493);
     border-radius: 5%;
-    margin: 1%;
 }
 .gallery h2{
     color: #331a15;
