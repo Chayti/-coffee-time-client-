@@ -16,6 +16,8 @@ import about_6 from '../../images/6.png';
 import Gallery from "../Gallery/Gallery";
 import Reviews from "../Reviews/Reviews";
 import InstaPic from "../InstaPic/InstaPic";
+import Product from "../Product/Product";
+import useProducts from "../../hooks/useProducts";
 
 const flashAnimation = keyframes`${flash}`;
 const FlashDiv = styled.div`
@@ -28,6 +30,8 @@ const PulseDiv = styled.div`
 `;
 
 const Home = () => {
+
+    const [products] = useProducts();
 
     const [photos, setPhotos] = useState([])
     useEffect(() => {
@@ -54,7 +58,7 @@ const Home = () => {
                     <h1 className="mx-5 special2">Would you like a Cup of Delicious Coffee?</h1>
                     <h2 className="mt-4 mx-5">Coffee Time - Relaxation in every sip! Get the nostalgia back!! Your companion of every moment!!! Enjoy the beautiful moments and make them memorable.</h2>
                     <br /><br />
-                    <button className="mx-5 px-5 btn home-banner-btn">Learn More</button>
+                    <a href="#learnMore"><button className="mx-5 px-5 btn home-banner-btn">Learn More</button></a>
                 </div>
             </div>
 
@@ -162,6 +166,28 @@ const Home = () => {
                 <Reviews></Reviews>
             </div>
 
+            <div id="learnMore" className="products section-7">
+                <div className="d-flex justify-content-between container">
+                    <div className="text-start">
+                        <p>Special Online Shop</p>
+                        <h1>Our Popular Products</h1>
+                    </div>
+                    <div>
+                        <button className="btn3">See All Products</button>
+                    </div>
+                </div>
+                <div className="product-container container my-5">
+                    <Row xs={1} md={3}>
+                        {
+                            products.slice(0, 3).map(product => <Product
+                                key={product.id}
+                                product={product}
+                            ></Product>)
+                        }
+                    </Row>
+                </div>
+            </div>
+
             <div className="container-fluid section-8 mb-5">
                 <p>Follow Us Now</p>
                 <h1>Follow on Instagram</h1>
@@ -174,6 +200,7 @@ const Home = () => {
                     }
                 </Row>
             </div>
+
         </div>
     )
 }

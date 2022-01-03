@@ -4,23 +4,20 @@
         "name": "John Deo",
         "img": "https://i.ibb.co/WzWzNYq/client1.jpg",
         "description": "My favourite drink - coffee... But I think I love it much more after having a sip there.",
-        "designation": "Founder",
-        "rating": 5
+        "designation": "Founder"
     },
     {
         "id": 2,
         "name": "Sumi Roy",
         "img": "https://i.ibb.co/mbw7Y4N/client2.jpg",
         "description": "Yaaaa! Espresso... I just loved it. No No everything was impossible without you Coffee Time.",
-        "designation": "Manager",
-        "rating": 4
+        "designation": "Manager"
     },
     {
         "id": 3,
         "name": "David Lee",
         "img": "https://i.ibb.co/FgkNBkS/client3.jpg",
         "description": "Every time I am here, I just lost myself. The piece you give me ... nothing can be compared.",
-        "designation": "Designer",
-        "rating": 5
+        "designation": "Designer"
     }
 ]

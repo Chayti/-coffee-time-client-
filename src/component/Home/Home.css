@@ -149,6 +149,38 @@
     background-position: right;
 }
 
+
+.section-7{
+    margin: 5% 0;
+    padding: 5% 0;
+    background-color: #eceae3;
+    background-repeat: no-repeat;
+}
+.section-7 h1{
+    color: #331a15;
+    font-size: 4em;
+    font-family: 'Rancho', cursive;
+    text-shadow:  0px 0px 5px #000;
+}
+.section-7 p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+}
+.btn3{
+    font-family: 'Rancho', cursive;
+    background-color: #331813;
+    border: 3px solid #331a15;
+    font-size: 1.8em;
+    color: #eceae3;
+    padding: 0 2%;
+    border-radius: 7%;
+}
+.btn3:hover{
+    background-color: #eceae3; 
+    color: #331a15;   
+}
+
+
 @media only screen and (max-width:770px){
     .special1{
         display: none;

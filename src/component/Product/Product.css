@@ -1,0 +1,20 @@
+.product{
+    border: 3px solid #331a15;
+}
+.product h2{
+    color: #331a15;
+    font-size: 2em;
+    font-family: 'Rancho', cursive;
+    text-align: left;
+}
+.product p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    text-align: justify;
+}
+.product .price h4{
+    color: #331a15;
+    font-size: 2.5em;
+    font-family: 'Rancho', cursive;
+    text-shadow:  0px 0px 5px #000;
+}
