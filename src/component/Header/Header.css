@@ -1,0 +1,30 @@
+.logo{
+  height: 5em;
+}
+
+/* navbar */
+.navbar{
+  background-color: #331a15;
+}
+
+.navbar .link{
+  text-decoration: none;
+  color: #eceae3;
+  font-weight: bold;
+  font-size: 1em;
+  /* margin-left: em ; */
+  padding: 5px;
+  font-family: 'Raleway', sans-serif;
+}
+.navbar .link:hover{
+  background-color: #eceae3;
+  border-radius: 5px;
+  color: #331a15;
+  transition: background-color 2s;
+}
+.navbar h1{
+  color: #eceae3;
+  font-size: 4em;
+  font-family: 'Rancho', cursive;
+  text-shadow:  0px 0px 10px #000;
+}

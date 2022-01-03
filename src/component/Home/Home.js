@@ -18,6 +18,8 @@ import Reviews from "../Reviews/Reviews";
 import InstaPic from "../InstaPic/InstaPic";
 import Product from "../Product/Product";
 import useProducts from "../../hooks/useProducts";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 const flashAnimation = keyframes`${flash}`;
 const FlashDiv = styled.div`
@@ -49,7 +51,7 @@ const Home = () => {
 
     return (
         <div>
-
+            <Header></Header>
             <div className="section-1 box">
                 <div className="text-start px-md-5 mx-md-5 banner-detail">
                     <PulseDiv>
@@ -201,6 +203,7 @@ const Home = () => {
                 </Row>
             </div>
 
+            <Footer></Footer>
         </div>
     )
 }
