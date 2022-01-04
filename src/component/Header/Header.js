@@ -42,7 +42,7 @@ const Header = () => {
               }
               {
                 user.email ?
-                  <span className="link">Hello, {user.displayName}</span>
+                  <span className="mx-2" style={{ color: "#eceae3" }}>Hello, {user.displayName}</span>
                   : <p></p>
               }
               {

@@ -3,8 +3,8 @@ import { useParams } from "react-router";
 import './ProductDetail.css';
 import useAuth from "../../hooks/useAuth";
 import { useForm } from "react-hook-form";
-import Header from "../Shared/Header/Header";
-import Footer from "../Shared/Footer/Footer";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 const ProductDetail = () => {
 
@@ -14,10 +14,9 @@ const ProductDetail = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     useEffect(() => {
-        fetch(`products/${productId}`)
+        fetch(`http://localhost:5000/products/${productId}`)
             .then(res => res.json())
             .then(data => {
-                console.log(`products/${productId}`)
                 setProduct(data)
             }
             );
@@ -27,9 +26,10 @@ const ProductDetail = () => {
         data.productId = productId
         data.name = product.name
         data.img = product.img
+        data.price=product.price
         data.description = product.description
         data.status = 'pending'
-        fetch('https://sheltered-peak-41800.herokuapp.com/order', {
+        fetch('http://localhost:5000/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

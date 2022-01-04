@@ -11,9 +11,9 @@ const Product = ({ product }) => {
             <p>{description}</p>
             <div className="d-flex justify-content-between mt-5 price">
                 <h4 className="px-3">${price}</h4>
-                {/* <Link to={`/product/${_id}`}> */}
-                <button className="btn2 mx-3 rounded">Buy Now</button>
-                {/* </Link> */}
+                <Link to={`/product/${_id}`}>
+                    <button className="btn2 mx-3 rounded">Buy Now</button>
+                </Link>
             </div>
         </div>
     );

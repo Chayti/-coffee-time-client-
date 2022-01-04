@@ -6,6 +6,7 @@ import Login from './component/Login/Login/Login';
 import PrivateRoute from "./component/Login/PrivateRoute/PrivateRoute";
 import Register from './component/Login/Register/Register';
 import NotFound from "./component/NotFound/NotFound";
+import ProductDetail from "./component/ProductDetail/ProductDetail";
 import Products from "./component/Products/Products";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 
@@ -24,9 +25,9 @@ function App() {
             <Route exact path="/products">
               <Products></Products>
             </Route>
-            {/* <PrivateRoute path="/product/:productId">
+            <PrivateRoute path="/product/:productId">
               <ProductDetail></ProductDetail>
-            </PrivateRoute> */}
+            </PrivateRoute>
             <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
             </PrivateRoute>
