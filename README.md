@@ -16,4 +16,4 @@ This site -
     6) Framework & Library Used: Bootstrap, Material UI
 
 Admin Email: chayti@gmail.com
-Admin Pass: chayti@gmail.com
+Admin Pass: 123456
