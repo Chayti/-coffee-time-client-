@@ -3,6 +3,7 @@ import './App.css';
 import Home from './component/Home/Home';
 import Login from './component/Login/Login/Login';
 import Register from './component/Login/Register/Register';
+import NotFound from "./component/NotFound/NotFound";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 
 function App() {
@@ -32,9 +33,9 @@ function App() {
             <Route exact path="/register">
               <Register></Register>
             </Route>
-            {/* <Route path="*">
+            <Route path="*">
               <NotFound></NotFound>
-            </Route> */}
+            </Route>
           </Switch>
         </Router>
       </AuthProvider>
