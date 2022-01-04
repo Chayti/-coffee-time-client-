@@ -20,6 +20,7 @@ import Product from "../Product/Product";
 import useProducts from "../../hooks/useProducts";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import { Link } from "react-router-dom";
 
 const flashAnimation = keyframes`${flash}`;
 const FlashDiv = styled.div`
@@ -175,7 +176,9 @@ const Home = () => {
                         <h1>Our Popular Products</h1>
                     </div>
                     <div>
-                        <button className="btn3">See All Products</button>
+                        <Link to={'/products'}>
+                            <button className="btn3">See All Products</button>
+                        </Link>
                     </div>
                 </div>
                 <div className="product-container container my-5">

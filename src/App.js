@@ -4,6 +4,7 @@ import Home from './component/Home/Home';
 import Login from './component/Login/Login/Login';
 import Register from './component/Login/Register/Register';
 import NotFound from "./component/NotFound/NotFound";
+import Products from "./component/Products/Products";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 
 function App() {
@@ -18,9 +19,9 @@ function App() {
             <Route exact path="/home">
               <Home></Home>
             </Route>
-            {/* <Route exact path="/products">
+            <Route exact path="/products">
               <Products></Products>
-            </Route> */}
+            </Route>
             {/* <PrivateRoute path="/product/:productId">
               <ProductDetail></ProductDetail>
             </PrivateRoute> */}
