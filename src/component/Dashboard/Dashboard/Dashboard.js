@@ -15,6 +15,7 @@ import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import { Button } from '@mui/material';
 import DashboardHome from '../DashboardHome/DashboardHome';
 import useAuth from './../../../hooks/useAuth';
+import './Dashboard.css';
 
 const drawerWidth = 200;
 
@@ -29,37 +30,39 @@ function Dashboard(props) {
 
     const drawer = (
         <div>
-            <Toolbar />
+            <Toolbar style={{
+                backgroundColor: "#d2b48c"
+            }} />
             <Divider style={{ backgroundColor: "#331a15" }} />
-            <Link to="/home"><Button style={{ color: "#331a15" }}>Home</Button></Link>
+            <Link to="/home"><Button style={{ color: "#d2b48c" }}>Home</Button></Link>
             <br />
-            <Link to="/products"><Button style={{ color: "#331a15" }}>Products</Button></Link>
+            <Link to="/products"><Button style={{ color: "#d2b48c" }}>Products</Button></Link>
             <br />
             {
                 !admin && <Box>
-                    <Link to={`${url}/payment`}><Button style={{ color: "#331a15" }}>Payment</Button></Link>
+                    <Link to={`${url}/payment`}><Button style={{ color: "#d2b48c" }}>Payment</Button></Link>
                     <br />
-                    <Link to={`${url}/myOrders`}><Button style={{ color: "#331a15" }}>My Orders</Button></Link>
+                    <Link to={`${url}/myOrders`}><Button style={{ color: "#d2b48c" }}>My Orders</Button></Link>
                     <br />
-                    <Link to={`${url}/addReview`}><Button style={{ color: "#331a15" }}>Add Review</Button></Link>
+                    <Link to={`${url}/addReview`}><Button style={{ color: "#d2b48c" }}>Add Review</Button></Link>
                 </Box>
             }
 
             {
                 admin && <Box>
-                    <Link to={`${url}/makeAdmin`}><Button style={{ color: "#331a15" }}>Make Admin</Button></Link>
-                    <Link to={`${url}/addProduct`}><Button style={{ color: "#331a15" }}>Add A Product</Button></Link>
-                    <Link to={`${url}/manageOrder`}><Button style={{ color: "#331a15" }}>Manage all Orders</Button></Link>
-                    <Link to={`${url}/manageProduct`}><Button style={{ color: "#331a15" }}>Manage All Products</Button></Link>
+                    <Link to={`${url}/makeAdmin`}><Button style={{ color: "#d2b48c" }}>Make Admin</Button></Link>
+                    <Link to={`${url}/addProduct`}><Button style={{ color: "#d2b48c" }}>Add A Product</Button></Link>
+                    <Link to={`${url}/manageOrder`}><Button style={{ color: "#d2b48c" }}>Manage all Orders</Button></Link>
+                    <Link to={`${url}/manageProduct`}><Button style={{ color: "#d2b48c" }}>Manage All Products</Button></Link>
                 </Box>
             }
             {
                 user.email
                     ? <button style={{
-                        border: "3px solid #331a15",
+                        border: "3px solid #a88d67",
                         backgroundColor: "#d2b48c",
                         color: "#331a15"
-                    }} onClick={logout} className="btn"><FontAwesomeIcon icon={faSignOutAlt} size="1x" />&nbsp;Log out</button>
+                    }} onClick={logout} className="btn rounded-pill"><FontAwesomeIcon icon={faSignOutAlt} size="1x" />&nbsp;Log out</button>
                     : <p></p>
             }
         </div >
