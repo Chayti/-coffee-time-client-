@@ -26,10 +26,10 @@ const Register = () => {
         e.preventDefault();
     }
     return (
-        <Box>
-            <Grid container className="login-box" spacing={2}>
-                <Grid item className="front-bg-login-page">
-                    <Typography variant="h4" gutterBottom>Register</Typography>
+        <Box className="front-bg-login-page">
+            <Grid container className="login-box">
+                <Grid item>
+                    <Typography variant="h2" gutterBottom className="login">Register</Typography>
                     {!isLoading && <form onSubmit={handleLoginSubmit}>
                         <TextField
                             sx={{ width: '75%', m: 1 }}
@@ -63,12 +63,19 @@ const Register = () => {
                             onBlur={handleOnBlur}
                             variant="standard" />
 
-                        <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Register</Button>
+                        <Button style={{
+                            borderRadius: 35,
+                            backgroundColor: "#331a15",
+                            padding: "1% 7%",
+                            fontSize: "18px"
+                        }} sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Register</Button>
 
                         <br />
 
                         <NavLink style={{ textDecoration: 'none' }} to="/login">
-                            <Button variant="text">Already Registered? Please Login</Button>
+                            <Button style={{
+                                color: "#331a15"
+                            }} variant="text">Already Registered? Please Login</Button>
                         </NavLink>
                     </form>}
 

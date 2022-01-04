@@ -29,10 +29,10 @@ const Login = () => {
         signInWithGoogle(location, history)
     }
     return (
-        <Box>
-            <Grid container className="login-box" spacing={2}>
-                <Grid className="front-bg-login-page" item>
-                    <Typography variant="h4" gutterBottom>Login</Typography>
+        <Box className="front-bg-login-page">
+            <Grid container className="login-box">
+                <Grid item>
+                    <Typography variant="h2" gutterBottom className="login">Login</Typography>
                     <form onSubmit={handleLoginSubmit}>
                         <TextField
                             sx={{ width: '75%', m: 1 }}
@@ -50,10 +50,17 @@ const Login = () => {
                             onChange={handleOnChange}
                             variant="standard" />
 
-                        <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Login</Button>
+                        <Button style={{
+                            borderRadius: 35,
+                            backgroundColor: "#331a15",
+                            padding: "1% 7%",
+                            fontSize: "18px"
+                        }} sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Login</Button>
 
                         <NavLink style={{ textDecoration: 'none' }} to="/register">
-                            <Button variant="text">New User? Please Register</Button>
+                            <Button style={{
+                                color: "#331a15"
+                            }} variant="text">New User? Please Register</Button>
                         </NavLink>
 
                         {isLoading && <div className="d-flex justify-content-center"><CircularProgress /></div>}
@@ -64,7 +71,11 @@ const Login = () => {
                     </form>
                     <p>------------------------</p>
 
-                    <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
+                    <Button style={{
+                        border: "3px solid #331a15",
+                        backgroundColor: "#d2b48c",
+                        color: "#331a15"
+                    }} onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
                 </Grid>
             </Grid>
         </Box>
