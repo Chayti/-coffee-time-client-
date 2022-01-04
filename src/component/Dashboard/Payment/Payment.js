@@ -10,7 +10,7 @@ const Payment = () => {
     const { id } = useParams();
     const [order, setOrder] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/order/${id}`)
+        fetch(`https://shielded-refuge-42801.herokuapp.com/order/${id}`)
             .then(res => res.json())
             .then(data => setOrder(data));
     }, [id]);

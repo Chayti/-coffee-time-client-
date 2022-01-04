@@ -14,7 +14,7 @@ const ProductDetail = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${productId}`)
+        fetch(`https://shielded-refuge-42801.herokuapp.com/products/${productId}`)
             .then(res => res.json())
             .then(data => {
                 setProduct(data)
@@ -26,10 +26,10 @@ const ProductDetail = () => {
         data.productId = productId
         data.name = product.name
         data.img = product.img
-        data.price=product.price
+        data.price = product.price
         data.description = product.description
         data.status = 'pending'
-        fetch('http://localhost:5000/order', {
+        fetch('https://shielded-refuge-42801.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

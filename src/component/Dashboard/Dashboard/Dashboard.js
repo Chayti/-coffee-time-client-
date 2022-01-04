@@ -24,6 +24,7 @@ import AddProduct from '../AddProduct/AddProduct';
 import ManageOrder from '../ManageOrder/ManageOrder';
 import ManageProduct from '../ManageProduct/ManageProduct';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
+import AddPhoto from '../AddPhoto/AddPhoto';
 
 const drawerWidth = 200;
 
@@ -57,6 +58,7 @@ function Dashboard(props) {
             {
                 admin && <Box>
                     <Link to={`${url}/makeAdmin`}><Button style={{ color: "#d2b48c" }}>Make Admin</Button></Link>
+                    <Link to={`${url}/addPhoto`}><Button style={{ color: "#d2b48c" }}>Add Photos</Button></Link>
                     <Link to={`${url}/addProduct`}><Button style={{ color: "#d2b48c" }}>Add A Product</Button></Link>
                     <Link to={`${url}/manageOrder`}><Button style={{ color: "#d2b48c" }}>Manage all Orders</Button></Link>
                     <Link to={`${url}/manageProduct`}><Button style={{ color: "#d2b48c" }}>Manage All Products</Button></Link>
@@ -160,6 +162,9 @@ function Dashboard(props) {
                     </AdminRoute>
                     <AdminRoute path={`${path}/addProduct`}>
                         <AddProduct></AddProduct>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/addPhoto`}>
+                        <AddPhoto></AddPhoto>
                     </AdminRoute>
                     <AdminRoute path={`${path}/manageOrder`}>
                         <ManageOrder></ManageOrder>

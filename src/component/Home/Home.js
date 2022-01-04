@@ -38,7 +38,7 @@ const Home = () => {
 
     const [photos, setPhotos] = useState([])
     useEffect(() => {
-        fetch('photoGallery.json')
+        fetch('https://shielded-refuge-42801.herokuapp.com/photos')
             .then(res => res.json())
             .then(data => setPhotos(data));
     }, [])
