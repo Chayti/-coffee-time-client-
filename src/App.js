@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
+import Dashboard from "./component/Dashboard/Dashboard/Dashboard";
 import Home from './component/Home/Home';
 import Login from './component/Login/Login/Login';
+import PrivateRoute from "./component/Login/PrivateRoute/PrivateRoute";
 import Register from './component/Login/Register/Register';
 import NotFound from "./component/NotFound/NotFound";
 import Products from "./component/Products/Products";
@@ -25,9 +27,9 @@ function App() {
             {/* <PrivateRoute path="/product/:productId">
               <ProductDetail></ProductDetail>
             </PrivateRoute> */}
-            {/* <PrivateRoute path="/dashboard">
+            <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
-            </PrivateRoute> */}
+            </PrivateRoute>
             <Route exact path="/login">
               <Login></Login>
             </Route>

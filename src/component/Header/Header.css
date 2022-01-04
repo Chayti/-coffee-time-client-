@@ -12,8 +12,7 @@
   color: #eceae3;
   font-weight: bold;
   font-size: 1em;
-  /* margin-left: em ; */
-  padding: 0 1em;
+  padding: 5px;
   font-family: 'Raleway', sans-serif;
 }
 .navbar .link:hover{
