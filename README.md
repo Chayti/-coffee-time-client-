@@ -15,3 +15,5 @@ This site -
     5) Technologies Used : ReactJS, NodeJS, ExpressJS, MongoDB, Heroku, Firebase & some react packages.
     6) Framework & Library Used: Bootstrap, Material UI
 
+Admin Email: chayti@gmail.com
+Admin Pass: chayti@gmail.com
