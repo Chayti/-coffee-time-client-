@@ -1,0 +1,11 @@
+.notfound{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../images/404.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #d0cccd;
+    height: 100vh;
+    background-size: 100%;    
+}

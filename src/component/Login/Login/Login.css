@@ -1,0 +1,25 @@
+.login-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../../images/gallery-banner1.png);
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: left top;
+    height: 100vh;
+    
+}
+.front-bg-login-page{
+    /* background-color:rgba(255, 248, 220, 0.87); */
+    background-image: url(../../../images/gallery-banner2.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-color: #eceae3;
+}
+.login-box .login{
+    color: #331a15;
+    font-size: 4em;
+    font-family: 'Rancho', cursive;
+    font-weight: bold;
+    text-shadow:  0px 0px 5px #000;
+}

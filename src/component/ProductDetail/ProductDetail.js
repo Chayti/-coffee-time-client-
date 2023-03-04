@@ -1,0 +1,87 @@
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router";
+import './ProductDetail.css';
+import useAuth from "../../hooks/useAuth";
+import { useForm } from "react-hook-form";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+
+const ProductDetail = () => {
+
+    const { user } = useAuth();
+    const { productId } = useParams();
+    const [product, setProduct] = useState([]);
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+
+    useEffect(() => {
+        fetch(`https://coffee-time-server2.vercel.app/products/${productId}`)
+            .then(res => res.json())
+            .then(data => {
+                setProduct(data)
+            }
+            );
+    }, [productId])
+
+    const onSubmit = data => {
+        data.productId = productId
+        data.name = product.name
+        data.img = product.img
+        data.price = product.price
+        data.description = product.description
+        data.status = 'pending'
+        fetch('https://coffee-time-server2.vercel.app/order', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.insertedId) {
+                    alert('Your order processed Successfully');
+                    reset();
+                }
+            })
+    };
+
+    return (
+        <div>
+            <Header></Header>
+            <div className="container my-5 product-detail">
+                <h1>{product.name}</h1>
+                <img className="my-3" src={product.img} alt="..." />
+                <br />
+                <h2 className="text-start fw-bold d-inline">Price: ${product.price}</h2>
+                <div className="d-flex justify-content-center"><h4>{product.description}</h4></div>
+                <br />
+                <br />
+                <div>
+                    <div className="shipping-form-bg d-flex justify-content-center">
+                        <form className="shipping-form my-4" onSubmit={handleSubmit(onSubmit)}>
+
+                            <input defaultValue={user.displayName} {...register("name")} /><br />
+
+                            <input defaultValue={user.email} {...register("email", { required: true })} /><br />
+                            {errors.email && <span className="error">This field is required</span>}
+                            <input placeholder="Address" defaultValue="" {...register("address")} /><br />
+                            <input placeholder="City" defaultValue="" {...register("city")} /><br />
+                            <input placeholder="phone number" defaultValue="" {...register("phone")} /><br />
+
+                            <input style={{
+                                border: "3px solid #331a15",
+                                backgroundColor: "#d2b48c",
+                                color: "#331a15",
+                                fontWeight: "bold"
+                            }} type="submit" value="Buy Now" />
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <Footer></Footer>
+        </div>
+    );
+}
+
+export default ProductDetail;

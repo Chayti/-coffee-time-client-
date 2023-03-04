@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Americano Coffee",
+        "img": "https://i.ibb.co/XZNLP26/6.png",
+        "description": "Americano Coffee is a type of coffee drink prepared by diluting an espresso with hot water, but with different flavor.",
+        "price": 13.6
+    },
+    {
+        "id": 2,
+        "name": "Black Coffee",
+        "img": "https://i.ibb.co/XZNLP26/6.png",
+        "description": "Black coffee is simply coffee that is normally brewed without the addition of additives such as sugar, milk, cream.",
+        "price": 11.9
+    },
+    {
+        "id": 3,
+        "name": "Espresso Coffee",
+        "img": "https://i.ibb.co/XZNLP26/6.png",
+        "description": "In Espresso a small amount of boiling water is forced under 9–10 bars of pressure through finely-ground coffee beans.",
+        "price": 18.1
+    },
+    {
+        "id": 4,
+        "name": "Cappuccino Coffee",
+        "img": "https://i.ibb.co/XZNLP26/6.png",
+        "description": "A cappuccino is an espresso-based coffee drink that originated in Austria and is prepared with steamed milk foam.",
+        "price": 15.5
+    },
+    {
+        "id": 5,
+        "name": "Macchiato Coffee",
+        "img": "https://i.ibb.co/XZNLP26/6.png",
+        "description": "Caffè macchiato, sometimes called espresso macchiato, is an espresso coffee drink with a small amount of milk, usually foamed.",
+        "price": 21.2
+    },
+    {
+        "id": 6,
+        "name": "Decaf Coffee",
+        "img": "https://i.ibb.co/XZNLP26/6.png",
+        "description": "Decaf is short for decaffeinated coffee. It's coffee from coffee beans that have had at least 97% of their caffeine removed.",
+        "price": 17.9
+    }
+]

@@ -1,0 +1,24 @@
+.dashboard-banner{
+    color:#331a15;
+    background-image: url(../../../images/logo.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    margin: 0;
+    height:100vh;
+}
+.dashboard-front-bg{
+    background-color: #d2b48c;
+}
+.css-5g2pep{
+    padding: 0 !important;
+}
+.front-bg-profile{
+    background-color: #d2b48cd0;
+}
+.dashboard-banner h4{
+    font-size: 3em;
+    font-family: 'Rancho', cursive;
+}
+.dashboard-banner h5{
+    font-family: 'Raleway', sans-serif;
+}
