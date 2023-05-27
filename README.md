@@ -2,7 +2,7 @@
 
 [Server Side Git Link](https://github.com/Chayti/coffee-time-server)
 
-[Server Site](https://coffee-time-server2.vercel.app/)
+[Server Site](https://coffee-time-server3.vercel.app/)
 
 [Client Side Git Link](https://github.com/Chayti/coffee-time-client/tree/chayti)
 

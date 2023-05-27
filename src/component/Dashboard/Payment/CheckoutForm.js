@@ -16,7 +16,7 @@ const CheckoutForm = ({ order }) => {
     const [clientSecret, setClientSecret] = useState('');
 
     useEffect(() => {
-        fetch('https://coffee-time-server2.vercel.app/create-payment-intent', {
+        fetch('https://coffee-time-server3.vercel.app/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -85,7 +85,7 @@ const CheckoutForm = ({ order }) => {
                 transaction: paymentIntent.client_secret.slice('_secret')[0]
             }
 
-            const url = `https://coffee-time-server2.vercel.app/order/${_id}`;
+            const url = `https://coffee-time-server3.vercel.app/order/${_id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {

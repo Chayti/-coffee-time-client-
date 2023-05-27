@@ -4,7 +4,7 @@ const useProducts = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://coffee-time-server2.vercel.app/products')
+        fetch('https://coffee-time-server3.vercel.app/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, []);

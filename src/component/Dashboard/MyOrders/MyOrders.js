@@ -9,13 +9,13 @@ const MyOrders = () => {
     const { user } = useAuth();
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch(`https://coffee-time-server2.vercel.app/myOrders/${user?.email}`)
+        fetch(`https://coffee-time-server3.vercel.app/myOrders/${user?.email}`)
             .then((res) => res.json())
             .then((data) => setProducts(data));
     }, [user.email, products]);
 
     const handleDelete = (id) => {
-        const url = `https://coffee-time-server2.vercel.app/orders/${id}`
+        const url = `https://coffee-time-server3.vercel.app/orders/${id}`
         const ans = window.confirm('Do you want to delete it?')
         if (ans) {
             axios

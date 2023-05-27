@@ -10,7 +10,7 @@ const Payment = () => {
     const { id } = useParams();
     const [order, setOrder] = useState({});
     useEffect(() => {
-        fetch(`https://coffee-time-server2.vercel.app/order/${id}`)
+        fetch(`https://coffee-time-server3.vercel.app/order/${id}`)
             .then(res => res.json())
             .then(data => setOrder(data));
     }, [id]);

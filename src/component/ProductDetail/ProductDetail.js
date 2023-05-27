@@ -14,7 +14,7 @@ const ProductDetail = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     useEffect(() => {
-        fetch(`https://coffee-time-server2.vercel.app/products/${productId}`)
+        fetch(`https://coffee-time-server3.vercel.app/products/${productId}`)
             .then(res => res.json())
             .then(data => {
                 setProduct(data)
@@ -29,7 +29,7 @@ const ProductDetail = () => {
         data.price = product.price
         data.description = product.description
         data.status = 'pending'
-        fetch('https://coffee-time-server2.vercel.app/order', {
+        fetch('https://coffee-time-server3.vercel.app/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

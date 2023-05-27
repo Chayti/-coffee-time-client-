@@ -11,7 +11,7 @@ const AddProduct = () => {
     const onSubmit = (data) => {
         data.email = user?.email;
         console.log(data);
-        axios.post('https://coffee-time-server2.vercel.app/addProduct', data)
+        axios.post('https://coffee-time-server3.vercel.app/addProduct', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully')

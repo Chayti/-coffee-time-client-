@@ -11,7 +11,7 @@ const AddReview = () => {
     const onSubmit = (data) => {
         data.email = user?.email;
         console.log(data);
-        axios.post('https://coffee-time-server2.vercel.app/addReview', data)
+        axios.post('https://coffee-time-server3.vercel.app/addReview', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Thanks for your review!')

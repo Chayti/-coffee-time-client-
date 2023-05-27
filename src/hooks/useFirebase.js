@@ -84,7 +84,7 @@ const useFirebase = () => {
     }, [auth])
 
     useEffect(() => {
-        fetch(`https://coffee-time-server2.vercel.app/users/${user.email}`)
+        fetch(`https://coffee-time-server3.vercel.app/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -101,7 +101,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('https://coffee-time-server2.vercel.app/users', {
+        fetch('https://coffee-time-server3.vercel.app/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'

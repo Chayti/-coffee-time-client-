@@ -6,7 +6,7 @@ const Reviews = () => {
     const [reviews, setReviews] = useState([])
 
     useEffect(() => {
-        fetch('https://coffee-time-server2.vercel.app/review')
+        fetch('https://coffee-time-server3.vercel.app/review')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, [reviews])

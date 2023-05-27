@@ -38,7 +38,7 @@ const Home = () => {
 
     const [photos, setPhotos] = useState([])
     useEffect(() => {
-        fetch('https://coffee-time-server2.vercel.app/photos')
+        fetch('https://coffee-time-server3.vercel.app/photos')
             .then(res => res.json())
             .then(data => setPhotos(data));
     }, [])

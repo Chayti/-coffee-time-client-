@@ -10,7 +10,7 @@ const MakeAdmin = () => {
     }
     const handleAdminSubmit = e => {
         const user = { email };
-        fetch('https://coffee-time-server2.vercel.app/users/admin', {
+        fetch('https://coffee-time-server3.vercel.app/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
